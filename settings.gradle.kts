@@ -2,7 +2,7 @@ rootProject.name = "dev.hytalemodding"
 
 plugins {
     // See documentation on https://scaffoldit.dev
-    id("dev.scaffoldit") version "0.2.1"
+    id("dev.scaffoldit") version "0.2.2"
 }
 
 //
