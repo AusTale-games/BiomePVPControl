@@ -1,0 +1,14 @@
+Group #pvp-status-root {
+    Anchor: (Top: 16, Right: 24);
+    LayoutMode: Top;
+
+    Label #pve-label {
+        Text: "PVE";
+        Style: (Alignment: Right, FontSize: 26, Color: #26ff6a);
+    }
+
+    Label #pvp-label {
+        Text: "PVP";
+        Style: (Alignment: Right, FontSize: 26, Color: #ff2d2d);
+    }
+}

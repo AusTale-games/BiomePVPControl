@@ -1,12 +1,11 @@
-# Hytale Plugin Template
+# ZonePVPControl
 
-A ready-to-use starting point for creating Hytale server plugins with Java, _or Kotlin_. If you've
-been using the Asset Editor and want to start writing server-side logic — custom commands, event
-handling, gameplay systems — this is the simplest place to begin.
+Biome PVP control plugin for Hytale. This project is based on the ScaffoldIt template and configured
+for the ZonePVPControl plugin namespace and manifest.
 
 ## How to start?
 
-1. Copy the template by downloading it or using the "Use this template" button.
+1. Clone the repo.
 2. [Configure or Install the Java SDK](https://hytalemodding.dev/en/docs/guides/plugin/setting-up-env)
    to use the latest 25 from JetBrains or similar.
 3. Open the project in your favorite IDE, we
@@ -24,13 +23,47 @@ From here,
 the [HytaleModding guides](https://hytalemodding.dev/en/docs/guides/plugin/build-and-test) cover
 more details!
 
-## Scaffoldit Plugin
+## ZonePVPControl Plugin
 
-While there are multiple plugins made for Hytale, the template currently uses a zero-boilerplate one
-where you only need the absolute minimum to start. However, you do have access to everything as
-normal if you know what you are doing.
+This is the ZonePVPControl plugin, a custom plugin for Hytale. This project is based on the ScaffoldIt template.
 
 For in-depth configuration, you can visit the [ScaffoldIt Plugin Docs](https://scaffoldit.dev).
+
+## CurseForge Description (Copy/Paste)
+
+ZonePVPControl lets you enable or disable PvP by zone group (Zone1–Zone4) and customize PvP death drops per zone.
+
+**Key Features**
+- Per-zone PvP enable/disable (Zone1–Zone4)
+- Per-zone PvP drop rules (FULL or PARTIAL)
+- Partial drop tuning (amount + durability percent)
+- Optional world allowlist
+
+**Config (config/ZonePVPControl/config.json)**
+```json
+{
+  "restrict_to_worlds": false,
+  "enabled_worlds": [],
+  "pvp_zone_enabled": {
+    "Zone1": false,
+    "Zone2": true,
+    "Zone3": true,
+    "Zone4": true
+  },
+  "pvp_zone_drop_modes": {
+    "Zone1": "FULL",
+    "Zone2": "FULL",
+    "Zone3": "FULL",
+    "Zone4": "FULL"
+  },
+  "pvp_partial_drop_amount_percent": 50.0,
+  "pvp_partial_drop_durability_percent": 0.0
+}
+```
+
+**Notes**
+- PvP is only allowed in zones set to `true` under `pvp_zone_enabled`.
+- PvP drop rules apply only to PvP deaths; PvE drop rules are controlled by world/game settings.
 
 ## Troubleshooting
 
